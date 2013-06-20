@@ -36,6 +36,7 @@ function check_time(){
   var minutes = minute_holder.children();
   // if there are 60 minutes in the minutes container
   if(minutes.length > 59){
+    minute_holder.empty();
     add_hour();
   }
 }
@@ -79,6 +80,6 @@ function random_rgb_int(){
 $(function(){
 
   //Second timer
-  second_timer = setInterval(add_second, 50);
+  second_timer = setInterval(add_second, 1);
 
 });
