@@ -24,10 +24,16 @@ h1 {
   border: 2px double black;
 }
 
-.second {
+.small-time {
   float: left;
   width: 60px;
   height: 40px;
+}
+
+.big-time {
+  float: left;
+  width: 150px;
+  height: 80px;
 }
 
 

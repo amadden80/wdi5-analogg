@@ -1,19 +1,24 @@
 var second_timer;
 
 function add_second(){
-  console.log('Second added.');
   var second = $('<div>');
-  second.addClass('second');
+  second.addClass('small-time');
   second.css('background-color', random_color());
   $('#seconds .time-holder').append(second);
 }
 
 function add_minute(){
-
+  var minute = $('<div>');
+  minute.addClass('small-time');
+  minute.css('background-color', random_color());
+  $('#minutes .time-holder').append(minute);
 }
 
 function add_hour(){
-
+    var hour = $('<div>');
+  hour.addClass('big-time');
+  hour.css('background-color', random_color());
+  $('#hours .time-holder').append(hour);
 }
 
 function check_time(){
