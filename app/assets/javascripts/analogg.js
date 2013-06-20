@@ -1,7 +1,9 @@
 var second_timer;
 
 function add_second(){
-
+  var second = $('<div>');
+  second.addClass('second');
+  $('#seconds .time-holder').append(second);
 }
 
 function add_minute(){
