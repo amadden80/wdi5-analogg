@@ -5,6 +5,7 @@ function add_second(){
   second.addClass('small-time');
   second.css('background-color', random_color());
   $('#seconds .time-holder').append(second);
+  check_time();
 }
 
 function add_minute(){
@@ -23,6 +24,20 @@ function add_hour(){
 
 function check_time(){
 
+  var second_holder = $('#seconds .time-holder');
+  var seconds = second_holder.children();
+  //if there are 60 seconds in the seconds container
+  if(seconds.length > 59){
+    second_holder.empty();
+    add_minute();
+  }
+
+  var minute_holder = $('#minutes .time-holder');
+  var minutes = minute_holder.children();
+  // if there are 60 minutes in the minutes container
+  if(minutes.length > 59){
+    add_hour();
+  }
 }
 
 function shuffle_seconds(){
@@ -64,6 +79,6 @@ function random_rgb_int(){
 $(function(){
 
   //Second timer
-  second_timer = setInterval(add_second, 1000);
+  second_timer = setInterval(add_second, 50);
 
 });
